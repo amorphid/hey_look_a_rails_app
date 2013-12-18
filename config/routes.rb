@@ -1,4 +1,6 @@
 HeyLookARailsApp::Application.routes.draw do
+  resources :foos
+
   get "static_pages/home"
 
   root to: "static_pages#home"
