@@ -12,3 +12,6 @@ gem "uglifier", ">= 1.3.0"
 group :doc do
   gem "sdoc", require: false
 end
+
+gem "better_errors" if ENV["INSTALL_DEVLOPMENT_GEMS"] == "yes_please"
+gem "binding_of_caller" if ENV["INSTALL_DEVLOPMENT_GEMS"] == "yes_please"
