@@ -1,4 +1,6 @@
 HeyLookARailsApp::Application.routes.draw do
+
+  resources :people, :constraints => { :protocol => 'https' }
   resources :foos
 
   root to: "foos#index"
