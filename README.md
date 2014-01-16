@@ -7,6 +7,10 @@
 ## Database configuration file
 * /config/database.yml.sample
 
+## Environment variables
+* /app/controllers/static_pages_controller.rb
+* /app/views/static_pages/environment_variables.html.erb
+
 ## Rake tasks
 * /lib/tasks/time_record_create.rake
 
