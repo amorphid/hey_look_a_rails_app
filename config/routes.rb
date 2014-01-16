@@ -1,4 +1,6 @@
 HeyLookARailsApp::Application.routes.draw do
+  resources :time_records
+
   resources :foos
 
   root to: "foos#index"
