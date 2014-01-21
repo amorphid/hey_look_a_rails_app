@@ -5,6 +5,9 @@ class StaticPagesController < ApplicationController
     set_baz
   end
 
+  def home
+  end
+
 private
   def set_foo
     @foo = case ENV["FOO"]
