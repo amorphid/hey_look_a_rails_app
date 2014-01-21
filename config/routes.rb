@@ -1,5 +1,5 @@
 HeyLookARailsApp::Application.routes.draw do
-  root to: "foos#index"
+  root to: "static_pages#home"
 
   resources :foos
   resources :time_records
