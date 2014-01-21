@@ -1,4 +1,4 @@
-<h1>When setting up database, dse this => rake db:setup</h1>
+<h1>When setting up database, do this => rake db:setup</h1>
 
 <h2>Running "rake db:migrate" may</h2>
 
@@ -9,9 +9,38 @@
   <li>make undesirable changes to your data</li>
 </ul>
 
-<h2>Play wit this app!</h2>
+<h2>Checkout the invalid migration</h2>
+
+<p>
+  The migration file '20131218204811_migration_using_case_statement_with_colons.rb' contains syntax that is not compatible with Ruby 1.9.x and above.  Run the following command the root directory.
+</p>
+
+<p>
+  <code>$ ruby ./db/migrate/20131218204811_migration_using_case_statement_with_colons.rb</code>
+</p>
+
+<h2>Setting up the database with "rake db:setup"</h2>
+
+<h3>These commands should run without issue</h3>
 
 <ul>
-  <li>"rake db:setup" should work properly"</li>
-  <li>This file should cause "rake db:migrate" to fail => 20131218204811_migration_using_case_statement_with_colons.rb</li>
+  <code>
+    <li>$ # if you already have a database, run 'bundle exec rake db:drop'</li>
+    <li>$ bundle exec rake db:setup</li>
+    <li>$ bundle exec rails generate scaffold banana unpeeled:boolean</li>
+    <li>$ bundle exec rake db:migrate</li>
+  </code>
+</ul>
+
+<h2>Now try setting up the datbase using by running the migrations</h2>
+
+
+<h3>These commands should raise an error</h3>
+
+<ul>
+  <code>
+    <li>$ # if you already have a database, run 'bundle exec rake db:drop'</li>
+    <li>$ bundle exec rake db:create</li>
+    <li>$ bundle exec rake db:migrate</li>
+  </code>
 </ul>
